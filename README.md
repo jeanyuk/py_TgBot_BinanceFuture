@@ -18,5 +18,5 @@ python -m pip install -r requirements.txt
 setup your keys in settings.py
 and run in terminal:
 ```python
-$ python3 start.py
+python3 start.py
 ```
