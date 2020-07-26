@@ -7,26 +7,14 @@ A Bot To interact with Binance Future Wallet Via Telegram!
   
   /orders Display open Future Orders
 
-
 ## INSTALL
-Install python3 and python3-pip!
-
-#### Binance API INSTALL:
+Install git, python3 and python3-pip!
 ```python
-$ sudo pip3 install python-binance
-```
-#### Telegram Python INSTALL:
-```python
-$ git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
-$ cd python-telegram-bot
-$ git submodule update --init --recursive
-$ python3 setup.py install
-```
-
-
-## RUN
 git clone https://github.com/miningseven/py_TgBot_BinanceFuture
-
+cd py_TgBot_BinanceFuture
+python -m pip install -r requirements.txt 
+```
+## RUN
 setup your keys in settings.py
 and run in terminal:
 ```python
