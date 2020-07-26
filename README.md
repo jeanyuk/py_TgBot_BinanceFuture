@@ -2,7 +2,9 @@
 A Bot To interact with Binance Future Wallet Via Telegram!
 
   /info Display Infos
+  
   /balance Display Balance and UnrealizedProfit from Futures Account
+  
   /orders Display open Future Orders
 
 
