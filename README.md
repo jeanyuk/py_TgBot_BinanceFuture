@@ -25,5 +25,5 @@ git clone https://github.com/miningseven/py_TgBot_BinanceFuture
 setup your keys in settings.py
 and run in terminal:
 ```python
-  python3 start.py
+$ python3 start.py
 ```
