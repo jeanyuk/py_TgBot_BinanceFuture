@@ -1,6 +1,6 @@
 import logging
 from telegram import LabeledPrice, ShippingOption
-from telegram.ext import Updater, CommandHandler, MessageHandler,Filters, PreCheckoutQueryHandler, ShippingQueryHandler
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, PreCheckoutQueryHandler, ShippingQueryHandler
 from binance.client import Client
 from settings import SKey, PKey , teltoken , telChanel
 
@@ -46,9 +46,12 @@ def orders(update,context):
         symbol = data[0]['symbol']
         qty = data[0]['origQty']
         a = qty+symbol
-        b = price+symbol
-        ordertxt = "Open Orders:\n {} EXIT AT {} WITH {}"
-        ordermsg = ordertxt.format(a,b,side)
+        data2 = client.futures_mark_price(symbol=symbol)
+        currentprice = data2.get("markPrice")
+        x = float(currentprice) 
+        xx = round(x,3)
+        ordertxt = "Open Orders:\nCurrent Price:{}USDT\n{} EXIT AT {} WITH {}"
+        ordermsg = ordertxt.format(xx,a,price,side)
         update.message.reply_text(ordermsg)
 
 
