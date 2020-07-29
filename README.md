@@ -24,3 +24,6 @@ and run in terminal:
 ```python
 python3 start.py
 ```
+## OPTIONAL
+Buy a VPS and Setup[LickHunterPRO](https://github.com/CryptoGnome/LickHunterPRO/releases)
+[Here you can rent a fast and cheap VPS!](https://deinserverhost.de/store/aff.php?aff=3606)
