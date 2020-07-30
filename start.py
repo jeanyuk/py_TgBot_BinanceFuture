@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 # Define a few command handlers. These usually take the two arguments update and
 # context. Error handlers also receive the raised TelegramError object in error.
 def info(update, context):
-    """Send a message when the command /start is issued."""
+    #Send a message when the command /start is issued.
     update.message.reply_text('BALANCE BOT Ahoy!\nCommands to use:\n  /balance = Display Account´s Balance\n  /orders = Display Open Orders')
 
 
@@ -26,7 +26,7 @@ def balance(update, context):
     Unrealprofit = data.get("totalUnrealizedProfit")
     x = float(balance) 
     xx = round(x,3)
-    y= float(Unrealprofit) 
+    y = float(Unrealprofit) 
     yy = round(y,3)
     txt = "Binance Future Wallet! \nBalance: {}USDT\nUnrealizedProfit: {}USDT"
     balancemsg = txt.format(xx,yy)
@@ -37,10 +37,8 @@ def orders(update,context):
     client = Client(api_key=SKey, api_secret=PKey)
     data = client.futures_get_open_orders()
     if len(data) == 0:
-        #print("No Open Orders!")
         update.message.reply_text("Buddy, No Open Orders!")
     else:
-        #print("Open Orders:")
         price = data[0]['price']
         side = data[0]['side']
         symbol = data[0]['symbol']
@@ -56,7 +54,7 @@ def orders(update,context):
 
 
 def error(update, context):
-    """Log Errors caused by Updates."""
+    #Log Errors caused by Updates.
     logger.warning('Update "%s" caused error "%s"', update, context.error)
 
 
